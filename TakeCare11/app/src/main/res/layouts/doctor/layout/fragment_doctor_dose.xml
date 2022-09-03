@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.doctor.DoctorDoseFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/doctor_dose_med_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Medicine name"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/doctor_dose_txtview_for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="for"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintStart_toEndOf="@+id/doctor_dose_med_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/doctor_dose_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="3"
+            android:hint="days"
+            android:inputType="number"
+            android:maxLength="3"
+            app:layout_constraintStart_toEndOf="@+id/doctor_dose_txtview_for"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/doctor_dose_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="3"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/doctor_dose_txtview_qty"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_med_name" />
+
+        <Spinner
+            android:id="@+id/doctor_dose_qty_type_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/doctor_dose_qty"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_med_name" />
+
+        <TextView
+            android:id="@+id/doctor_dose_txtview_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="12dp"
+            android:text="Quantity:"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_med_name" />
+
+        <CheckBox
+            android:id="@+id/doctor_dose_morning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Morning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_qty" />
+
+        <CheckBox
+            android:id="@+id/doctor_dose_Evening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evening"
+            app:layout_constraintStart_toEndOf="@+id/doctor_dose_afternoon"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_qty" />
+
+        <CheckBox
+            android:id="@+id/doctor_dose_afternoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Afternoon"
+            app:layout_constraintStart_toEndOf="@+id/doctor_dose_morning"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_qty" />
+
+        <Button
+            android:id="@+id/doctor_dose_add_time"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Add Time"
+            app:layout_constraintStart_toEndOf="@+id/doctor_dose_afternoon"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_Evening" />
+
+        <TextView
+            android:id="@+id/doctor_dose_txtview_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Times:"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_morning" />
+
+        <TableLayout
+            android:id="@+id/doctor_dose_time_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/doctor_dose_txtview_times"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_morning" />
+
+        <TextView
+            android:id="@+id/doctor_dose_time_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/doctor_dose_add_time"
+            app:layout_constraintTop_toBottomOf="@+id/doctor_dose_Evening" />
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

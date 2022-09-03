@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.takecare_11">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".BeginActivity"></activity>
+        <activity android:name=".ui.pathologist.PathologistUpdateIDActivity" />
+        <activity android:name=".ui.chemist.ChemistUpdateIDActivity" />
+        <activity android:name=".ui.doctor.DoctorUpdateID" />
+        <activity android:name=".ui.patient.PatientUpdateIDActivity" />
+        <activity android:name=".ui.UpdateAccountActivity" />
+        <activity android:name=".ui.patient.PatientViewReportActivity" />
+        <activity android:name=".ui.pathologist.PathologistGiveReportActivity" />
+        <activity android:name=".ui.pathologist.PathologistScanQRActivity" />
+        <activity
+            android:name=".ui.pathologist.PathologistDashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.patient.PatientBuyPrescriptionActivity" />
+        <activity
+            android:name=".ui.chemist.ChemistDashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".register.RegisterPathologistActivity" />
+        <activity android:name=".register.RegisterChemistActivity" />
+        <activity android:name=".ui.patient.PatientViewPrescriptionActivity" />
+        <activity android:name=".ui.patient.PatientScanPrescriptionActivity" />
+        <activity
+            android:name=".ui.patient.PatientDashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.doctor.DoctorPrescriptionQRActivity" />
+        <activity android:name=".ui.doctor.DoctorMakePrescriptionActivity" />
+        <activity
+            android:name=".ui.doctor.DoctorDashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".register.RegisterDoctorActivity" />
+        <activity android:name=".register.RegisterPatientActivity" />
+        <activity android:name=".register.RegisterUserType" />
+        <activity android:name=".register.RegisterUserActivity" />
+        <activity
+            android:name=".signin.SignInActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".ui.AlertReceiver" />
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TakeCare-1.1</string>
+    <!--change host server address here -->
+    <string name="host_website">http://192.168.0.101:8080/TakeCare/</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

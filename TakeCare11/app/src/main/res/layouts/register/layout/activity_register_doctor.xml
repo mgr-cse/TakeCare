@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="24dp"
+    tools:context=".register.RegisterDoctorActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tell us your work info...\n"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/reg_doctor_workplace_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Workplace name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/reg_doctor_workplace_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Workplace address"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/reg_doctor_work_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Workphone"
+                android:inputType="phone"
+                android:maxLength="10" />
+
+            <EditText
+                android:id="@+id/reg_doctor_smc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="SMC registration number"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/reg_doctor_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:text="Create My Account" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
